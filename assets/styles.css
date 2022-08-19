@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --progressbar-progress: #51e1be;
+    --progressbar-bg: #cd5974;
+    --border: #b6c8dd;
+}
+
+body {
+    font-size: 18px;
+    height: 100vh;
+}
+
+hr {
+    color: var(--border);
+}
+
+.active-vs-idle {
+    margin-bottom: 8px;
+}
+
+.day-container {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    width: 210px;
+}
+
+.day-container:not(:last-child) {
+    margin-right: 16px;
+}
+
+.day-of-week {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.progress {
+    background-color: var(--progressbar-bg);
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    background-color: var(--progressbar-progress);
+}
+
+.time-spent-activity {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.time-spent-container:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.widget-header {
+    margin-bottom: 56px;
+}
+
+.widget-wrapper {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 10px 32px 32px;
+}
+
+/** TIME SPENT BARS **/
+.time-spent-bar-1 {
+    width: 65%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.time-spent-bar-2 {
+    width: 50%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-3 {
+    width: 42%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.time-spent-bar-4 {
+    width: 38%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-5 {
+    width: 31%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-6 {
+    width: 26%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-7 {
+    width: 24%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-8 {
+    width: 20%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-9 {
+    width: 10%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+.time-spent-bar-10 {
+    width: 5%;
+    background-color: #660ead;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+/** BOOTSTRAP OVERRIDE **/
+
+.row {
+    --bs-gutter-x: 0;
+}
