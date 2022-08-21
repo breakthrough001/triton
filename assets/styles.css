@@ -15,7 +15,7 @@ p {
 :root {
     --progressbar-progress: #4caf50;
     --progressbar-bg: #ff5252;
-    --border: #b6c8dd;
+    --border: #dddddd;
     --activity-bar: #6200ea;
 }
 
@@ -26,7 +26,8 @@ body {
 }
 
 hr {
-    color: var(--border);
+    background-color: var(--border);
+    height: 1px;
 }
 
 .active-vs-idle {
@@ -55,7 +56,7 @@ hr {
 }
 
 .non-active-container {
-    height: 25px;
+    height: 46px;
 }
 
 .non-active-container:first-child {
@@ -98,13 +99,15 @@ hr {
 }
 
 .weekdays {
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow-x: scroll;
     max-width: 1180px;
 }
 
 .widget-header {
     margin-bottom: 32px;
+}
+
+.widget-title {
     font-size: 18px;
 }
 
