@@ -7,20 +7,22 @@
 
 p {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --progressbar-progress: #51e1be;
-    --progressbar-bg: #cd5974;
+    --progressbar-progress: #4caf50;
+    --progressbar-bg: #ff5252;
     --border: #b6c8dd;
+    --activity-bar: #6200ea;
 }
 
 body {
+    padding: 100px;
     font-size: 18px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 hr {
@@ -35,7 +37,7 @@ hr {
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px;
-    width: 210px;
+    min-width: 240px;
 }
 
 .day-container:not(:last-child) {
@@ -45,16 +47,45 @@ hr {
 .day-of-week {
     font-weight: bold;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.non-active-bar {
+    width: 40px;
+}
+
+.non-active-container {
+    height: 25px;
+}
+
+.non-active-container:first-child {
+    padding-top: 16px;
+}
+
+.progress,
+.progress-bar {
+    height: 20px;
 }
 
 .progress {
     background-color: var(--progressbar-bg);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin-bottom: 8px;
 }
 
 .progress-bar {
     background-color: var(--progressbar-progress);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.progress .non-active {
+    background-color: var(--border) !important;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .time-spent-activity {
@@ -66,95 +97,70 @@ hr {
     margin-bottom: 16px;
 }
 
+.weekdays {
+    overflow-y: hidden;
+    overflow-x: auto;
+    max-width: 1180px;
+}
+
 .widget-header {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
+    font-size: 18px;
 }
 
 .widget-wrapper {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.14),
         0px 1px 5px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
-    padding: 10px 32px 32px;
+    padding: 24px 24px 24px;
+    width: 1180px;
 }
 
 /** TIME SPENT BARS **/
 .time-spent-bar-1 {
     width: 65%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 
 .time-spent-bar-2 {
     width: 50%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-3 {
     width: 42%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 
 .time-spent-bar-4 {
     width: 38%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-5 {
     width: 31%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-6 {
     width: 26%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-7 {
     width: 24%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-8 {
     width: 20%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-9 {
     width: 10%;
-    background-color: #660ead;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
 .time-spent-bar-10 {
     width: 5%;
-    background-color: #660ead;
+}
+
+.time-spent-bar-1,
+.time-spent-bar-2,
+.time-spent-bar-3,
+.time-spent-bar-4,
+.time-spent-bar-5,
+.time-spent-bar-6,
+.time-spent-bar-7,
+.time-spent-bar-8,
+.time-spent-bar-9,
+.time-spent-bar-10 {
+    background-color: var(--activity-bar);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     height: 20px;
